@@ -44,7 +44,7 @@ function App() {
         <Route path="/login" element={<AuthForm />} />
         <Route 
           path="/" 
-          element={user ? <HomePage /> : <Navigate to="/login" />} 
+          element={user ? <Navigate to ="/welcome" /> : <Navigate to="/login" />} 
         />
         {/* 其他所有路由交给 AppRouter */}
         <Route path="/*" element={<AppRouter />} />
