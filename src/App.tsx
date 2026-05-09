@@ -35,7 +35,7 @@ function App() {
   if(!user) {
     return <AuthForm />;
   }
-  return <AppRouter />;
+  return <AppRouter user={user}/>;
 }
 
 export default App;
