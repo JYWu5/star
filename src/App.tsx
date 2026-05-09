@@ -5,6 +5,7 @@ import UserStatus from './components/UserStatus';
 import AppRouter from './router';
 import { useEffect, useState } from 'react';
 import { supabase } from './lib/supabase';
+import Welcome from './components/pages/Welcome';
 
 function HomePage() {
   return (
@@ -44,7 +45,7 @@ function App() {
         <Route path="/login" element={<AuthForm />} />
         <Route 
           path="/" 
-          element={user ? <AppRouter  /> : <Navigate to="/login" />} 
+          element={user ? <Welcome /> : <Navigate to="/login" />} 
         />
         {/* 其他所有路由交给 AppRouter */}
         <Route path="/*" element={<AppRouter />} />
