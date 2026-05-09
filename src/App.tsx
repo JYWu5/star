@@ -7,14 +7,7 @@ import { useEffect, useState } from 'react';
 import { supabase } from './lib/supabase';
 import Welcome from './components/pages/Welcome';
 
-function HomePage() {
-  return (
-    <div style={{ padding: 20 }}>
-      <h1>欢迎来到星语心愿</h1>
-      <UserStatus />
-    </div>
-  );
-}
+
 
 function App() {
   const [user, setUser] = useState<any>(null);
