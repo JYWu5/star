@@ -39,19 +39,10 @@ function App() {
     return <div style={{ padding: 20 }}>加载中...</div>;
   }
 
-  return (
-    <div style={{ padding: 20 }}>
-      <Routes>
-        <Route path="/login" element={<AuthForm />} />
-        <Route 
-          path="/" 
-          element={user ? <Welcome /> : <Navigate to="/login" />} 
-        />
-        {/* 其他所有路由交给 AppRouter */}
-        <Route path="/*" element={<AppRouter />} />
-      </Routes>
-    </div>
-  );
+  if(!user) {
+    return <AuthForm />;
+  }
+  return <AppRouter />;
 }
 
 export default App;
